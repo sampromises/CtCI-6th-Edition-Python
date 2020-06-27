@@ -41,6 +41,6 @@ def convertIntToSet(x, aset):
 
 
 
-print(getSubsets([1,2,3],0))
+print((getSubsets([1,2,3],0)))
 print("\n")
-print(getSubsets2([1,2,3]))
+print((getSubsets2([1,2,3])))

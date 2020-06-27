@@ -9,10 +9,10 @@ def sum_lists(ll_a, ll_b):
         result = carry
         if n1:
             result += n1.value
-            n1 = n1.next
+            n1 = n1.__next__
         if n2:
             result += n2.value
-            n2 = n2.next
+            n2 = n2.__next__
 
         ll.add(result % 10)
         carry = result // 10
@@ -37,8 +37,8 @@ def sum_lists_followup(ll_a, ll_b):
     result = 0
     while n1 and n2:
         result = (result * 10) + n1.value + n2.value
-        n1 = n1.next
-        n2 = n2.next
+        n1 = n1.__next__
+        n2 = n2.__next__
 
     # Create new linked list
     ll = LinkedList()
@@ -53,5 +53,5 @@ ll_b = LinkedList()
 ll_b.generate(3, 0, 9)
 print(ll_a)
 print(ll_b)
-print(sum_lists(ll_a, ll_b))
-print(sum_lists_followup(ll_a, ll_b))
+print((sum_lists(ll_a, ll_b)))
+print((sum_lists_followup(ll_a, ll_b)))

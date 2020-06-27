@@ -5,7 +5,7 @@ def partition(ll, x):
     current = ll.tail = ll.head
 
     while current:
-        nextNode = current.next
+        nextNode = current.__next__
         current.next = None
         if current.value < x:
             current.next = ll.head
@@ -16,7 +16,7 @@ def partition(ll, x):
         current = nextNode
         
     # Error check in case all nodes are less than x
-    if ll.tail.next is not None:
+    if ll.tail.__next__ is not None:
         ll.tail.next = None
 
 

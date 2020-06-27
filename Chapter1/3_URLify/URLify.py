@@ -6,7 +6,7 @@ def urlify(string, length):
     '''function replaces single spaces with %20 and removes trailing spaces'''
     new_index = len(string)
 
-    for i in reversed(range(length)):
+    for i in reversed(list(range(length))):
         if string[i] == ' ':
             # Replace spaces
             string[new_index - 3:new_index] = '%20'

@@ -54,5 +54,5 @@ def isPathMemoized(maze, row, col, path, failedPoints):
     return False
 
 
-print(getPath([[True, True],[True,True]]))    
-print(getPathMemoized([[True,True], [False,True]]))
+print((getPath([[True, True],[True,True]])))    
+print((getPathMemoized([[True,True], [False,True]])))

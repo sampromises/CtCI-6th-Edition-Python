@@ -74,7 +74,7 @@ def minProduct3Helper(smaller, bigger):
 
 
     
-print(multiply(5,6,0))
-print(minProduct(5,6))
-print(minProduct2(5,6))
-print(minProduct3(5,6))
+print((multiply(5,6,0)))
+print((minProduct(5,6)))
+print((minProduct2(5,6)))
+print((minProduct3(5,6)))

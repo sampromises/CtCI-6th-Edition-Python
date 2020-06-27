@@ -7,12 +7,12 @@ def remove_dups(ll):
 
     current = ll.head
     seen = set([current.value])
-    while current.next:
+    while current.__next__:
         if current.next.value in seen:
-            current.next = current.next.next
+            current.next = current.next.__next__
         else:
             seen.add(current.next.value)
-            current = current.next
+            current = current.__next__
 
     return ll
 
@@ -24,12 +24,12 @@ def remove_dups_followup(ll):
     current = ll.head
     while current:
         runner = current
-        while runner.next:
+        while runner.__next__:
             if runner.next.value == current.value:
-                runner.next = runner.next.next
+                runner.next = runner.next.__next__
             else:
-                runner = runner.next
-        current = current.next
+                runner = runner.__next__
+        current = current.__next__
 
     return ll.head
 

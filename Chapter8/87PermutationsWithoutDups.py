@@ -42,5 +42,5 @@ def getPerms2Inner(prefix, remainder, result):
         c = remainder[i]
         getPerms2Inner(prefix + c, before + after, result)
 
-print(getPerms("str"))
-print(getPerms2("str"))
+print((getPerms("str")))
+print((getPerms2("str")))

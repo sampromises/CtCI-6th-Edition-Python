@@ -26,6 +26,6 @@ def printPermsInner(letterCountMap, prefix, remaining, result):
             printPermsInner(letterCountMap, prefix + character, remaining - 1, result)
             letterCountMap[character] = count
 
-print(printPerms("aaf"))
+print((printPerms("aaf")))
 
 

@@ -24,7 +24,7 @@ class LinkedList:
         current = self.head
         while current:
             yield current
-            current = current.next
+            current = current.__next__
 
     def __str__(self):
         values = [str(x) for x in self]
@@ -35,7 +35,7 @@ class LinkedList:
         node = self.head
         while node:
             result += 1
-            node = node.next
+            node = node.__next__
         return result
 
     def add(self, value):
@@ -43,7 +43,7 @@ class LinkedList:
             self.tail = self.head = LinkedListNode(value)
         else:
             self.tail.next = LinkedListNode(value)
-            self.tail = self.tail.next
+            self.tail = self.tail.__next__
         return self.tail
 
     def add_to_beginning(self, value):
@@ -71,5 +71,5 @@ class DoublyLinkedList(LinkedList):
             self.tail = self.head = LinkedListNode(value, None, self.tail)
         else:
             self.tail.next = LinkedListNode(value)
-            self.tail = self.tail.next
+            self.tail = self.tail.__next__
         return self

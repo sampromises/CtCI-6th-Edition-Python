@@ -5,13 +5,13 @@ def is_palindrome(ll):
     fast = slow = ll.head
     stack = []
 
-    while fast and fast.next:
+    while fast and fast.__next__:
         stack.append(slow.value)
-        slow = slow.next
-        fast = fast.next.next
+        slow = slow.__next__
+        fast = fast.next.__next__
 
     if fast:
-        slow = slow.next
+        slow = slow.__next__
 
     while slow:
         top = stack.pop()
@@ -19,12 +19,12 @@ def is_palindrome(ll):
         if top != slow.value:
             return False
 
-        slow = slow.next
+        slow = slow.__next__
 
     return True
 
 
 ll_true = LinkedList([1, 2, 3, 4, 5, 4, 3, 2, 1])
-print(is_palindrome(ll_true))
+print((is_palindrome(ll_true)))
 ll_false = LinkedList([1, 2, 3, 4, 5, 6, 7, 8, 9])
-print(is_palindrome(ll_false))
+print((is_palindrome(ll_false)))

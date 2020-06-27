@@ -13,10 +13,10 @@ def intersection(list1, list2):
     shorter_node, longer_node = shorter.head, longer.head
 
     for i in range(diff):
-        longer_node = longer_node.next
+        longer_node = longer_node.__next__
 
     while shorter_node is not longer_node:
-        shorter_node = shorter_node.next
-        longer_node = longer_node.next
+        shorter_node = shorter_node.__next__
+        longer_node = longer_node.__next__
 
     return longer_node
